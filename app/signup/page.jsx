@@ -1,6 +1,6 @@
 import { FaFacebookF, FaLinkedin, FaGoogle, FaRegEnvelope } from "react-icons/fa";
 import { MdLockOutline} from "react-icons/md";
-const Signup = () => {
+export default function signup(){
   return (
     <div className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center ">
       <div className="bg-white rounded-2xl shadow-2xl flex w-full max-w-4xl">
@@ -8,24 +8,33 @@ const Signup = () => {
           <div className="text-left font-bold">
             <span className="text-teal-500">Ibirds Software</span> Services
           </div>
+
+          {/* Signup content */}
           <div className="py-10">
             <h2 className="text-2xl font-bold text-teal-500 mb-2">
-              Sign in to EMS
+              Sign Up to EMS
             </h2>
             <div className="border-2 w-10 border-teal-500 inline-block m-2"></div>
-            <div className="flex justify-center my-2">
-              <a className="border-2 border-teal-500 rounded-full p-2 mx-1 hover:bg-teal-500 hover:text-white">
-                <FaFacebookF className="text-s"></FaFacebookF>
-              </a>
-              <a className="border-2 border-teal-500 rounded-full p-2 mx-1 hover:bg-teal-500 hover:text-white">
-                <FaLinkedin className="text-s"></FaLinkedin>
-              </a>
-              <a className="border-2 border-teal-500 rounded-full p-2 mx-1 hover:bg-teal-500 hover:text-white">
-                <FaGoogle className="text-s"></FaGoogle>
-              </a>
-            </div>
-            <p className="text-gray-400 my-3">Or use your email account</p>
+
             <div className="flex flex-col items-center">
+            <div className="bg-gray-100 w-64 p-2 flex items-center mb-3">
+                <FaRegEnvelope className="text-gray-400 m-2" />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter Name"
+                  className="bg-gray-100 outline-none text-sm flex-1"
+                ></input>
+              </div>
+              <div className="bg-gray-100 w-64 p-2 flex items-center mb-3">
+                <FaRegEnvelope className="text-gray-400 m-2" />
+                <input
+                  type="phone"
+                  name="phone"
+                  placeholder="Enter Phone"
+                  className="bg-gray-100 outline-none text-sm flex-1"
+                ></input>
+              </div>
               <div className="bg-gray-100 w-64 p-2 flex items-center mb-3">
                 <FaRegEnvelope className="text-gray-400 m-2" />
                 <input
@@ -61,7 +70,7 @@ const Signup = () => {
                 href="#"
                 className="border-2 border-teal-500 rounded-full px-12 py-2 inline-block font-semibold hover:bg-teal-500 hover:text-white"
               >
-                Sign In
+                Sign Up
               </a>
             </div>
           </div>
@@ -70,18 +79,16 @@ const Signup = () => {
           <h2 className="text-2xl font-bold mb-2">Sign In section </h2>
           <div className="border-2 w-10 border-white inline-block m-2"></div>
           <p className="mb-10">
-            Fill up personal information and start journey with us.
+            Let`s grab it
           </p>
           <a
-            href="/signup"
+            href="/"
             className="border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-teal-500"
           >
-            Sign Up
+            Sign In
           </a>
         </div>
       </div>
     </div>
   );
 };
-
-export default Signup;
